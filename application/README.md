@@ -9,7 +9,7 @@ Traditional authentication primarily establishes that a user can successfully pr
 
 However, successful authentication does not necessarily mean that the session should remain trusted indefinitely.
 
-A user's activity may change after authentication. They may begin accessing resources outside their assigned responsibilities, accessing another employee's information, interacting with sensitive documents, or performing increasingly risky operations.
+A user's activity may change after authentication. They may begin accessing resources outside their assigned responsibilities, accessing another employee's information, interacting with sensitive documents or performing increasingly risky operations.
 
 This project investigates a simple research question:
 
@@ -19,8 +19,8 @@ The prototype addresses this by continuously evaluating activity during an authe
 
 As risk changes, the system can:
 
-* allow the session to continue;
-* require additional authentication;
+* allow the session to continue.
+* require additional authentication.
 * or terminate the session when risk becomes critical.
 
 ---
@@ -29,7 +29,7 @@ As risk changes, the system can:
 
 The project is based on the principle that:
 
-> **Authentication establishes an initial identity context, but trust in an active session must continue to be evaluated as activity and context change.**
+> **Authentication establishes an initial identity context but trust in an active session must continue to be evaluated as activity and context change.**
 
 The system therefore separates:
 
@@ -59,25 +59,25 @@ Continuous evaluation determines whether the behavior of the authenticated sessi
 
 The project implements a local research environment consisting of:
 
-* **Keycloak** as the identity provider;
-* **OpenID Connect (OIDC)** for authentication;
-* **Authorization Code Flow with PKCE**;
-* a **Node.js / Express** research application;
-* a real-time **risk engine**;
-* session-bound risk state;
-* simulated corporate resources;
-* employee profiles;
-* project assignments;
-* document sensitivity levels;
-* document activity monitoring;
-* risk correlations;
-* adaptive step-up authentication;
-* risk decay;
-* session lifecycle handling;
-* terminal-based risk monitoring;
+* **Keycloak** as the identity provider
+* **OpenID Connect (OIDC)** for authentication
+* **Authorization Code Flow with PKCE**
+* a **Node.js / Express** research application
+* a real-time **risk engine**
+* session-bound risk state
+* simulated corporate resources
+* employee profiles
+* project assignments
+* document sensitivity levels
+* document activity monitoring
+* risk correlations
+* adaptive step-up authentication
+* risk decay
+* session lifecycle handling
+* terminal-based risk monitoring
 * activity logging.
 
-The application evaluates risk **during the request lifecycle**, before the protected operation is allowed to proceed.
+The application evaluates risk **during the request lifecycle** before the protected operation is allowed to proceed.
 
 ---
 
@@ -234,22 +234,22 @@ The prototype was validated through a series of controlled experiments.
 
 The experiments covered:
 
-* fresh authentication;
-* normal activity;
-* cross-user access;
-* unassigned project access;
-* sensitive-resource access;
-* document actions;
-* confidential documents;
-* restricted documents;
-* correlated document activity;
-* cross-context correlations;
-* HIGH-risk transitions;
-* successful step-up authentication;
-* failed step-up authentication;
-* risk decay;
-* absence of decay without qualifying activity;
-* logout and risk-state destruction;
+* fresh authentication
+* normal activity
+* cross-user access
+* unassigned project access
+* sensitive-resource access
+* document actions
+* confidential documents
+* restricted documents
+* correlated document activity
+* cross-context correlations
+* HIGH-risk transitions
+* successful step-up authentication
+* failed step-up authentication
+* risk decay
+* absence of decay without qualifying activity
+* logout and risk-state destruction
 * creation of a new session ID.
 
 For example, a restricted-document download produced:
@@ -272,27 +272,26 @@ This demonstrated that the prototype can combine individual signals with context
 
 The completed experiments demonstrated that the prototype can:
 
-1. establish an authenticated session;
-2. continuously evaluate activity after authentication;
-3. accumulate risk within the active session;
-4. distinguish activities according to severity;
-5. incorporate resource sensitivity;
-6. identify contextual relationships between activities;
-7. apply correlation-based risk;
-8. reduce risk through qualifying normal activity;
-9. prevent passive time from automatically reducing risk;
-10. trigger step-up authentication at HIGH risk;
-11. reduce risk after successful step-up authentication;
-12. retain the accumulated risk after failed step-up authentication;
-13. destroy risk state during logout;
+1. establish an authenticated session
+2. continuously evaluate activity after authentication
+3. accumulate risk within the active session
+4. distinguish activities according to severity
+5. incorporate resource sensitivity
+6. identify contextual relationships between activities
+7. apply correlation-based risk
+8. reduce risk through qualifying normal activity
+9. prevent passive time from automatically reducing risk
+10. trigger step-up authentication at HIGH risk
+11. reduce risk after successful step-up authentication
+12. retain the accumulated risk after failed step-up authentication
+13. destroy risk state during logout
 14. create a new research session identifier after a new login.
 
-Two experiments remain explicitly pending empirical confirmation:
+One experiment remain explicitly pending empirical confirmation:
 
-* CRITICAL session termination;
-* detailed risk-state inspection.
+* CRITICAL session termination.
 
-These are not presented as completed experimental findings.
+This is not presented as completed experimental findings.
 
 ---
 
@@ -301,46 +300,69 @@ These are not presented as completed experimental findings.
 ```text
 risk-adaptive-continuous-authentication/
 │
-├── README.md
-│
-├── application/
-│   ├── server.js
-│   ├── riskengine.js
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── views/
-│   └── public/
-│
-├── corporate_documents/
-│   ├── PUBLIC/
-│   ├── INTERNAL/
-│   ├── CONFIDENTIAL/
-│   └── RESTRICTED/
-│
-├── keycloak/
-│   └── realm-export.json
-│
-├── experiments/
-│   ├── README.md
-│   └── experiment-results.md
-│
-├── documentation/
-│   ├── architecture.md
-│   ├── risk-model.md
-│   ├── authentication-flow.md
-│   └── testing.md
-│
-├── logs/
-│   └── .gitkeep
-│
-├── .env.example
-├── .gitignore
-└── LICENSE
+└── application/
+    │
+    ├── corporate_documents/
+    │   ├── PUBLIC/
+    │   ├── INTERNAL/
+    │   ├── CONFIDENTIAL/
+    │   └── RESTRICTED/
+    │
+    ├── documentation/
+    │   ├── architecture.md
+    │   ├── risk-model.md
+    │   ├── authentication-flow.md
+    │   └── testing.md
+    │
+    ├── experiments/
+    │   ├── README.md
+    │   ├── experiment-results.md
+    │   └── sample-activity.log
+    │
+    ├── keycloak/
+    │   └── realm-export-sanitized.json
+    │
+    ├── logs/
+    │
+    ├── public/
+    │   ├── document.html
+    │   ├── employee.html
+    │   ├── project.html
+    │   ├── styless.css
+    │   └── workspace.html
+    │
+    ├── views/
+    │   ├── dashboard.html
+    │   ├── home.html
+    │   ├── privileged.html
+    │   ├── protected.html
+    │   └── sensitive.html
+    │
+    ├── .env.example
+    ├── .gitignore
+    ├── package.json
+    ├── package-lock.json
+    ├── riskengine.js
+    └── server.js
 ```
 
-The Keycloak realm export is optional and should contain only **sanitized research configuration**. Secrets, credentials, and other sensitive development data must not be committed.
+### Directory and File Descriptions
 
----
+* **`corporate_documents/`** — Contains the simulated corporate documents organized according to their sensitivity levels.
+* **`documentation/`** — Contains the technical documentation describing the architecture, risk model, authentication flow and testing methodology.
+* **`experiments/`** — Contains the experiment descriptions, recorded research results and a sanitized sample activity log.
+* **`keycloak/`** — Contains the sanitized Keycloak realm configuration used to reproduce the authentication environment.
+* **`logs/`** — Stores runtime application logs locally. Log files are excluded from version control.
+* **`public/`** — Contains static HTML pages and stylesheets used by the research application.
+* **`views/`** — Contains server-rendered pages used by the application.
+* **`riskengine.js`** — Implements the continuous risk evaluation engine, including risk scoring, signal processing, correlations, risk decay, step-up handling and session termination.
+* **`server.js`** — Implements the application server, authentication flow, protected resources, telemetry collection, live risk evaluation, and enforcement of risk decisions.
+* **`.env.example`** — Provides the environment-variable template required to configure the application.
+* **`.gitignore`** — Defines files and directories that should not be committed to the repository.
+* **`package.json` / `package-lock.json`** — Define the Node.js application dependencies and package configuration.
+
+```
+
 
 # 11. Documentation
 
@@ -349,8 +371,8 @@ The project documentation is divided according to purpose.
 | Document                               | Description                                                                        |
 | -------------------------------------- | ---------------------------------------------------------------------------------- |
 | `documentation/architecture.md`        | Technical architecture of the research prototype                                   |
-| `documentation/risk-model.md`          | Risk scoring, signals, correlations, thresholds, decay, and adaptive responses     |
-| `documentation/authentication-flow.md` | Initial authentication, session creation, step-up authentication, and logout flows |
+| `documentation/risk-model.md`          | Risk scoring, signals, correlations, thresholds, decay and adaptive responses     |
+| `documentation/authentication-flow.md` | Initial authentication, session creation, step-up authentication and logout flows |
 | `documentation/testing.md`             | Testing methodology and validation procedures                                      |
 | `experiments/README.md`                | Guide to the experimental environment and experiment records                       |
 | `experiments/experiment-results.md`    | Recorded experimental results and findings                                         |
@@ -394,11 +416,11 @@ The project documentation is divided according to purpose.
 
 The local environment requires:
 
-* Node.js;
-* Java / a compatible Java runtime for Keycloak;
-* Keycloak;
-* a configured Keycloak realm and client;
-* a browser;
+* Node.js
+* Java / a compatible Java runtime for Keycloak
+* Keycloak
+* a configured Keycloak realm and client
+* a browser
 * the project source code.
 
 ## Application Setup
@@ -423,7 +445,6 @@ copy .env.example .env
 
 Configure the required Keycloak and application settings in `.env`.
 
-**Do not commit `.env` to GitHub.**
 
 Start the application using the project's configured start command.
 
@@ -435,13 +456,13 @@ After startup, access the local application through the configured localhost add
 
 The experiments can be reproduced by:
 
-1. starting Keycloak;
-2. starting the Node.js application;
-3. authenticating through Keycloak;
-4. performing the activity associated with an experiment;
-5. observing the application's response;
-6. observing the terminal risk monitor;
-7. recording the generated signals and risk score;
+1. starting Keycloak
+2. starting the Node.js application
+3. authenticating through Keycloak
+4. performing the activity associated with an experiment
+5. observing the application's response
+6. observing the terminal risk monitor
+7. recording the generated signals and risk score
 8. comparing the result with the expected behavior.
 
 Experimental evidence should record:
@@ -475,7 +496,7 @@ The research scope intentionally focuses on:
 
 > **Continuous evaluation of trust within an already authenticated session.**
 
-The prototype does not attempt to solve every aspect of adaptive access control, identity management, or enterprise security.
+The prototype does not attempt to solve every aspect of adaptive access control, identity management or enterprise security.
 
 The selected risk weights and thresholds are experimental parameters used to demonstrate the behavior of the model. They should not be interpreted as universally optimal production values.
 
@@ -485,15 +506,15 @@ The selected risk weights and thresholds are experimental parameters used to dem
 
 The current prototype has several limitations:
 
-* the corporate resources are simulated;
-* the employee and project data are simulated;
-* risk weights are manually defined research parameters;
-* the experiments are performed in a controlled local environment;
-* the prototype has not been evaluated against a large real-world user population;
-* the model has not been statistically validated against enterprise security incidents;
+* the corporate resources are simulated
+* the employee and project data are simulated
+* risk weights are manually defined research parameters
+* the experiments are performed in a controlled local environment
+* the prototype has not been evaluated against a large real-world user population
+* the model has not been statistically validated against enterprise security incidents
 * the current implementation is not intended for production deployment.
 
-Consequently, the results demonstrate **prototype feasibility and behavioral validation**, rather than universal security effectiveness.
+Consequently, the results demonstrate **prototype feasibility and behavioral validation** rather than universal security effectiveness.
 
 ---
 
@@ -533,32 +554,24 @@ This distinction forms the basis of the project's investigation into risk-adapti
 
 Potential future research can investigate:
 
-* empirical calibration of risk weights;
-* larger-scale behavioral datasets;
-* additional contextual signals;
-* comparative evaluation of risk models;
-* false-positive and false-negative analysis;
-* usability impact of repeated step-up authentication;
-* evaluation against realistic enterprise activity patterns;
+* empirical calibration of risk weights
+* larger-scale behavioral datasets
+* additional contextual signals
+* comparative evaluation of risk models
+* false-positive and false-negative analysis
+* usability impact of repeated step-up authentication
+* evaluation against realistic enterprise activity patterns
 * alternative methods for restoring or reducing session risk.
 
 These are potential extensions and are outside the current prototype scope.
 
 ---
 
-# 19. License
+# 19. Summary
 
-This project is provided for research and educational purposes.
+This project investigates the idea that **successful authentication should establish identity but not necessarily permanent trust**.
 
-See `LICENSE` for the applicable licensing terms.
-
----
-
-# 20. Summary
-
-This project investigates the idea that **successful authentication should establish identity, but not necessarily permanent trust**.
-
-The implemented prototype continuously evaluates authenticated session activity, assigns contextual risk, detects correlated behavior, allows risk to decay under qualifying normal activity, and adapts its security response as risk changes.
+The implemented prototype continuously evaluates authenticated session activity, assigns contextual risk, detects correlated behavior, allows risk to decay under qualifying normal activity and adapts its security response as risk changes.
 
 The resulting model is:
 
