@@ -2,7 +2,6 @@
 
 A research prototype investigating how **continuous session-risk evaluation** can complement initial authentication by adapting trust according to changes in user activity and context.
 
----
 
 ## 1. Research Overview
 
