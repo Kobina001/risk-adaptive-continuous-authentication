@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Research Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <span class="brand-icon">
+            RA
+        </span>
+
+        <div>
+
+            <h1>
+                Risk-Adaptive Authentication
+            </h1>
+
+            <span>
+                Research Dashboard
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="/logout"
+        class="logout-button"
+    >
+        Logout
+    </a>
+
+</header>
+
+
+<main class="dashboard">
+
+
+    <!-- ==============================
+         Welcome Section
+         ============================== -->
+
+    <section class="welcome">
+
+        <div>
+
+            <div class="badge">
+                AUTHENTICATED SESSION
+            </div>
+
+
+            <h2>
+                Welcome, {{USERNAME}}
+            </h2>
+
+
+            <p>
+                Your identity has been successfully
+                authenticated through the research
+                identity provider.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         Session Status
+         ============================== -->
+
+    <section class="status-grid">
+
+
+        <!-- Authentication Status -->
+
+        <div class="status-card">
+
+            <span class="status-label">
+                Authentication Status
+            </span>
+
+
+            <strong class="success-text">
+                ✓ Authenticated
+            </strong>
+
+
+            <small>
+                Identity verified by Keycloak
+            </small>
+
+        </div>
+
+
+
+        <!-- Session Status -->
+
+        <div class="status-card">
+
+            <span class="status-label">
+                Session Status
+            </span>
+
+
+            <strong>
+                Active
+            </strong>
+
+
+            <small>
+                Current application session
+            </small>
+
+        </div>
+
+
+
+        <!-- Risk Status -->
+
+        <div class="status-card">
+
+            <span class="status-label">
+                Risk Status
+            </span>
+
+
+            <strong class="neutral-text">
+                Not Available
+            </strong>
+
+
+            <small>
+                Risk evaluation is not active
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==============================
+         Research Environment
+         ============================== -->
+
+    <section class="resources">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    RESEARCH ENVIRONMENT
+                </span>
+
+
+                <h3>
+                    Corporate Security Workspace
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-list">
+
+
+            <!-- Corporate Workspace -->
+
+            <a
+                href="/workspace"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        SIMULATED CORPORATE ENVIRONMENT
+                    </span>
+
+
+                    <h4>
+                        Corporate Security Workspace
+                    </h4>
+
+
+                    <p>
+                        Enter the simulated corporate
+                        environment and perform realistic
+                        workplace activities.
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         Application Resources
+         ============================== -->
+
+    <section class="resources">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    APPLICATION RESOURCES
+                </span>
+
+
+                <h3>
+                    Research Resources
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-list">
+
+
+            <!-- Standard Resource -->
+
+            <a
+                href="/protected"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        STANDARD RESOURCE
+                    </span>
+
+
+                    <h4>
+                        Protected Resource
+                    </h4>
+
+
+                    <p>
+                        Standard application resource
+                        available to the authenticated user.
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- Sensitive Resource -->
+
+            <a
+                href="/sensitive"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        SENSITIVE RESOURCE
+                    </span>
+
+
+                    <h4>
+                        Sensitive Resource
+                    </h4>
+
+
+                    <p>
+                        Higher-sensitivity resource used
+                        for continuous authentication
+                        experiments.
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- Privileged Operation -->
+
+            <a
+                href="/privileged"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        PRIVILEGED OPERATION
+                    </span>
+
+
+                    <h4>
+                        Privileged Operation
+                    </h4>
+
+
+                    <p>
+                        High-sensitivity operation used
+                        for behavioral risk experiments.
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         Research Status
+         ============================== -->
+
+    <section class="research-note">
+
+
+        <div class="note-icon">
+            i
+        </div>
+
+
+        <div>
+
+            <h4>
+                Continuous Authentication Research Environment
+            </h4>
+
+
+            <p>
+                The current environment establishes an
+                authenticated corporate workspace. User
+                actions and contextual signals will be
+                progressively incorporated into the
+                continuous risk evaluation model.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        Risk-Adaptive Continuous Authentication
+        Research Project
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

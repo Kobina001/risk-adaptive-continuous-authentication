@@ -1,0 +1,496 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>{{DOCUMENT_NAME}}</title>
+
+    <link
+        rel="stylesheet"
+        href="/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <span class="brand-icon">
+            DC
+        </span>
+
+        <div>
+
+            <h1>
+                Corporate Document Center
+            </h1>
+
+            <span>
+                Continuous Authentication Research Environment
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="/logout"
+        class="logout-button"
+    >
+        Logout
+    </a>
+
+</header>
+
+
+<main class="dashboard">
+
+
+    <!-- ==============================
+         Document Information
+         ============================== -->
+
+    <section class="welcome">
+
+        <div>
+
+            <div class="badge">
+                {{CLASSIFICATION}}
+            </div>
+
+
+            <h2>
+                {{DOCUMENT_NAME}}
+            </h2>
+
+
+            <p>
+                Authenticated user:
+                <strong>{{USERNAME}}</strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         Document Metadata
+         ============================== -->
+
+    <section class="status-grid">
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                CLASSIFICATION
+            </span>
+
+            <strong>
+                {{CLASSIFICATION}}
+            </strong>
+
+            <small>
+                Corporate information classification
+            </small>
+
+        </div>
+
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                SENSITIVITY
+            </span>
+
+            <strong>
+                {{SENSITIVITY}}
+            </strong>
+
+            <small>
+                Behavioral risk sensitivity
+            </small>
+
+        </div>
+
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                OWNER
+            </span>
+
+            <strong>
+                {{OWNER}}
+            </strong>
+
+            <small>
+                Responsible department
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==============================
+         Document Content
+         ============================== -->
+
+    <section class="resources">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    DOCUMENT CONTENT
+                </span>
+
+                <h3>
+                    {{DOCUMENT_NAME}}
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="research-note">
+
+            <div>
+
+                <!--
+                    This ID allows the browser to obtain
+                    the actual document contents when the
+                    user performs the COPY operation.
+                -->
+
+                <p id="document-content">{{DOCUMENT_CONTENT}}</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         Document Actions
+         ============================== -->
+
+    <section class="resources">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    DOCUMENT OPERATIONS
+                </span>
+
+                <h3>
+                    Available Actions
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="resource-list">
+
+
+            <!-- VIEW -->
+
+            <a
+                href="/document/{{DOCUMENT_CLASSIFICATION}}/view"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        VIEW
+                    </span>
+
+                    <h4>
+                        View Document
+                    </h4>
+
+                    <p>
+                        Open and view the document.
+                    </p>
+
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- DOWNLOAD -->
+
+            <a
+                href="/document/{{DOCUMENT_CLASSIFICATION}}/download"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        DOWNLOAD
+                    </span>
+
+                    <h4>
+                        Download Document
+                    </h4>
+
+                    <p>
+                        Download a local copy of the document.
+                    </p>
+
+                </div>
+
+                <span class="arrow">
+                    ↓
+                </span>
+
+            </a>
+
+
+
+            <!-- COPY -->
+
+            <a
+                href="/document/{{DOCUMENT_CLASSIFICATION}}/copy"
+                class="resource-card"
+                onclick="copyDocumentContent(event, this)"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        COPY
+                    </span>
+
+                    <h4>
+                        Create Copy
+                    </h4>
+
+                    <p>
+                        Create a duplicate and copy the document
+                        contents to the clipboard.
+                    </p>
+
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- SHARE -->
+
+            <a
+                href="/document/{{DOCUMENT_CLASSIFICATION}}/share"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        SHARE
+                    </span>
+
+                    <h4>
+                        Share Document
+                    </h4>
+
+                    <p>
+                        Share this document with another user.
+                    </p>
+
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- DELETE -->
+
+            <a
+                href="/document/{{DOCUMENT_CLASSIFICATION}}/delete"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        DELETE
+                    </span>
+
+                    <h4>
+                        Delete Document
+                    </h4>
+
+                    <p>
+                        Remove this document from the active workspace.
+                    </p>
+
+                </div>
+
+                <span class="arrow">
+                    ×
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         Research Information
+         ============================== -->
+
+    <section class="research-note">
+
+        <div class="note-icon">
+            i
+        </div>
+
+        <div>
+
+            <h4>
+                Continuous Behavioral Monitoring
+            </h4>
+
+            <p>
+                Document operations are recorded as behavioral
+                events for continuous authentication research.
+                The system evaluates how user activity changes
+                throughout an authenticated session.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        Continuous Behavioral Risk Evaluation Research Project
+    </p>
+
+</footer>
+
+
+<!-- ==========================================
+     Clipboard Behaviour
+     ========================================== -->
+
+<script>
+
+async function copyDocumentContent(event, link) {
+
+    event.preventDefault();
+
+    const documentContent =
+        document.getElementById("document-content");
+
+    if (!documentContent) {
+
+        alert("Document content could not be found.");
+
+        return;
+    }
+
+
+    const content =
+        documentContent.innerText;
+
+
+    try {
+
+        /*
+         * Copy the actual document contents
+         * to the user's system clipboard.
+         */
+
+        await navigator.clipboard.writeText(content);
+
+
+        /*
+         * The server-side COPY route is still
+         * responsible for creating the physical
+         * duplicate and recording the research event.
+         */
+
+        window.location.href = link.href;
+
+    } catch (error) {
+
+        console.error(
+            "Clipboard copy failed:",
+            error
+        );
+
+        alert(
+            "The document copy was created, but the browser could not access the clipboard."
+        );
+
+        /*
+         * Still allow the server-side COPY
+         * operation to happen.
+         */
+
+        window.location.href = link.href;
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```

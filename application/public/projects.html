@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Project Workspace
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <span class="brand-icon">
+            CS
+        </span>
+
+        <div>
+
+            <h1>
+                Project Workspace
+            </h1>
+
+            <span>
+                Corporate Security Research Environment
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="/logout"
+        class="logout-button"
+    >
+        Logout
+    </a>
+
+</header>
+
+
+
+<main class="dashboard">
+
+
+    <!-- =========================================
+         NAVIGATION
+         ========================================= -->
+
+    <div class="page-navigation">
+
+        <a
+            href="/workspace"
+            class="back-button"
+        >
+            ← Back to Workspace
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================================
+         WELCOME
+         ========================================= -->
+
+    <section class="welcome">
+
+        <div>
+
+            <div class="badge">
+                PROJECT MANAGEMENT
+            </div>
+
+
+            <h2>
+                Welcome, {{USERNAME}}
+            </h2>
+
+
+            <p>
+                This workspace contains corporate projects
+                and research activities assigned within the
+                organization.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROJECT SUMMARY
+         ========================================= -->
+
+    <section class="status-grid">
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                ACTIVE PROJECTS
+            </span>
+
+
+            <strong>
+                2
+            </strong>
+
+
+            <small>
+                Currently active projects
+            </small>
+
+        </div>
+
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                PLANNING
+            </span>
+
+
+            <strong>
+                1
+            </strong>
+
+
+            <small>
+                Project awaiting initiation
+            </small>
+
+        </div>
+
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                ACCESS LEVEL
+            </span>
+
+
+            <strong class="success-text">
+                AUTHENTICATED
+            </strong>
+
+
+            <small>
+                Access granted through active session
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROJECTS
+         ========================================= -->
+
+    <section class="resources">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    CORPORATE PROJECTS
+                </span>
+
+
+                <h3>
+                    Assigned Projects
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-list">
+
+
+            <!-- =====================================
+                 PROJECT 1
+                 ===================================== -->
+
+            <a
+                href="/projects/iam-modernization"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        INTERNAL
+                    </span>
+
+
+                    <h4>
+                        Identity Access Management Modernization
+                    </h4>
+
+
+                    <p>
+                        Modernization of identity and access
+                        management processes, authentication
+                        controls, and access governance.
+                    </p>
+
+
+                    <small>
+                        Department: Information Security
+                        &nbsp; • &nbsp;
+                        Status: Active
+                    </small>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- =====================================
+                 PROJECT 2
+                 ===================================== -->
+
+            <a
+                href="/projects/continuous-authentication"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        RESTRICTED
+                    </span>
+
+
+                    <h4>
+                        Continuous Authentication Research
+                    </h4>
+
+
+                    <p>
+                        Research project investigating continuous
+                        authentication using behavioral and
+                        contextual signals during authenticated
+                        sessions.
+                    </p>
+
+
+                    <small>
+                        Department: Cybersecurity Research
+                        &nbsp; • &nbsp;
+                        Status: Active
+                    </small>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- =====================================
+                 PROJECT 3
+                 ===================================== -->
+
+            <a
+                href="/projects/security-infrastructure-review"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        CONFIDENTIAL
+                    </span>
+
+
+                    <h4>
+                        Corporate Security Infrastructure Review
+                    </h4>
+
+
+                    <p>
+                        Review of corporate security infrastructure,
+                        defensive controls, and operational security
+                        processes.
+                    </p>
+
+
+                    <small>
+                        Department: Information Security
+                        &nbsp; • &nbsp;
+                        Status: Planning
+                    </small>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         RESEARCH NOTE
+         ========================================= -->
+
+    <section class="research-note">
+
+        <div class="note-icon">
+            i
+        </div>
+
+
+        <div>
+
+            <h4>
+                Research Environment
+            </h4>
+
+
+            <p>
+                Project access and navigation form part of
+                the behavioral telemetry collected during
+                the authenticated session. These activities
+                may later be analyzed as part of the
+                continuous authentication research.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        Continuous Behavioral Risk Evaluation Research Project
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

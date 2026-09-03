@@ -1,0 +1,833 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   TOP BAR
+   ========================================= */
+
+.topbar {
+    height: 76px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e9f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+
+    background: #172033;
+    color: white;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.brand h1 {
+    font-size: 16px;
+}
+
+
+.brand span {
+    font-size: 12px;
+    color: #718096;
+}
+
+
+.system-status {
+    font-size: 13px;
+    color: #526071;
+}
+
+
+.status-dot {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    background: #28a745;
+
+    border-radius: 50%;
+
+    margin-right: 6px;
+}
+
+
+/* =========================================
+   LANDING PAGE
+   ========================================= */
+
+.landing-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 25px;
+}
+
+
+.hero {
+    max-width: 760px;
+    margin-bottom: 70px;
+}
+
+
+.badge {
+    display: inline-block;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    background: #e9eef7;
+    color: #40577a;
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h2,
+.welcome h2,
+.resource-page h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+
+.hero p,
+.welcome p,
+.resource-page > p {
+    color: #667085;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.primary-button,
+.secondary-button,
+.logout-button {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+
+.primary-button {
+    background: #172033;
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+}
+
+
+.primary-button:hover {
+    background: #29364e;
+}
+
+
+/* =========================================
+   INFORMATION / STATUS GRID
+   ========================================= */
+
+.info-grid,
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+
+.info-card,
+.status-card {
+    background: white;
+
+    border: 1px solid #e5e9f0;
+
+    border-radius: 12px;
+
+    padding: 25px;
+}
+
+
+.card-icon {
+    font-size: 12px;
+    font-weight: bold;
+    color: #718096;
+
+    margin-bottom: 20px;
+}
+
+
+.info-card h3 {
+    margin-bottom: 10px;
+}
+
+
+.info-card p,
+.status-card small {
+    color: #718096;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   DASHBOARD
+   ========================================= */
+
+.dashboard {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 55px 25px;
+}
+
+
+/* =========================================
+   PAGE NAVIGATION
+   ========================================= */
+
+.page-navigation {
+    margin-bottom: 24px;
+}
+
+
+.back-button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    background: #ffffff;
+    color: #172033;
+
+    border: 1px solid #ccd3df;
+
+    border-radius: 8px;
+
+    padding: 10px 16px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.back-button:hover {
+    background: #f4f7fb;
+
+    border-color: #9aa8bc;
+
+    transform: translateX(-2px);
+}
+
+
+/* =========================================
+   WELCOME
+   ========================================= */
+
+.welcome {
+    margin-bottom: 35px;
+}
+
+
+.welcome h2 {
+    font-size: 34px;
+}
+
+
+/* =========================================
+   STATUS CARDS
+   ========================================= */
+
+.status-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.status-label,
+.section-label,
+.resource-type {
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #718096;
+}
+
+
+.status-card strong {
+    font-size: 20px;
+}
+
+
+.success-text {
+    color: #238636;
+}
+
+
+.neutral-text {
+    color: #667085;
+}
+
+
+/* =========================================
+   RESOURCE SECTIONS
+   ========================================= */
+
+.resources {
+    margin-top: 55px;
+}
+
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+
+.section-heading h3 {
+    margin-top: 7px;
+    font-size: 24px;
+}
+
+
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================================
+   RESOURCE CARDS
+   ========================================= */
+
+.resource-card {
+    background: white;
+
+    border: 1px solid #e5e9f0;
+
+    border-radius: 12px;
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.resource-card:hover:not(.disabled) {
+    border-color: #9aa8bc;
+
+    transform: translateX(2px);
+}
+
+
+.resource-card h4 {
+    margin: 8px 0;
+
+    font-size: 17px;
+}
+
+
+.resource-card p {
+    color: #718096;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.resource-card small {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #8993a3;
+
+    font-size: 12px;
+}
+
+
+.resource-type {
+    font-size: 10px;
+}
+
+
+.arrow {
+    font-size: 25px;
+
+    flex-shrink: 0;
+
+    margin-left: 20px;
+}
+
+
+.disabled {
+    opacity: 0.55;
+}
+
+
+.lock {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   EMPLOYEE DIRECTORY
+   ========================================= */
+
+.employee-card {
+    min-height: 105px;
+}
+
+
+.employee-card h4 {
+    margin-bottom: 6px;
+}
+
+
+.employee-card p {
+    margin-bottom: 2px;
+}
+
+
+.employee-card small {
+    margin-top: 7px;
+}
+
+
+/* =========================================
+   EMPLOYEE PROFILE
+   ========================================= */
+
+.employee-profile-panel {
+    background: #ffffff;
+
+    border: 1px solid #e5e9f0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.employee-profile-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+
+.employee-avatar {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: #172033;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+.employee-profile-header h3 {
+    margin-bottom: 5px;
+
+    font-size: 21px;
+}
+
+
+.employee-profile-header p {
+    color: #718096;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   PROJECT DETAIL PANEL
+   ========================================= */
+
+.project-details-panel {
+    background: #ffffff;
+
+    border: 1px solid #e5e9f0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.project-detail-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+
+.project-detail-row:last-child {
+    border-bottom: none;
+}
+
+
+.project-detail-row span {
+    color: #718096;
+
+    font-size: 13px;
+}
+
+
+.project-detail-row strong {
+    font-size: 14px;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   PROJECT OBJECTIVES
+   ========================================= */
+
+.project-objectives {
+    background: #ffffff;
+
+    border: 1px solid #e5e9f0;
+
+    border-radius: 12px;
+
+    padding: 24px 28px;
+}
+
+
+.project-objectives ul {
+    padding-left: 20px;
+}
+
+
+.project-objectives li {
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+
+.project-objectives li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   RESEARCH NOTE
+   ========================================= */
+
+.research-note {
+    margin-top: 35px;
+
+    background: #eef3f9;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+
+.note-icon {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: #718096;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+.research-note h4 {
+    margin-bottom: 7px;
+}
+
+
+.research-note p {
+    color: #667085;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+.research-note p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   LOGOUT
+   ========================================= */
+
+.logout-button {
+    color: #667085;
+    font-size: 13px;
+}
+
+
+.logout-button:hover {
+    color: #172033;
+}
+
+
+/* =========================================
+   RESOURCE PAGE
+   ========================================= */
+
+.resource-page {
+    max-width: 800px;
+}
+
+
+.access-panel {
+    background: white;
+
+    border: 1px solid #e5e9f0;
+
+    border-radius: 12px;
+
+    margin: 35px 0;
+}
+
+
+.access-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+
+.access-row:last-child {
+    border-bottom: none;
+}
+
+
+.secondary-button {
+    color: #172033;
+
+    padding: 12px 18px;
+
+    border: 1px solid #ccd3df;
+
+    border-radius: 8px;
+}
+
+
+.secondary-button:hover {
+    background: #f4f7fb;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #8993a3;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    .info-grid,
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+
+    .system-status {
+        display: none;
+    }
+
+
+    .hero h2,
+    .resource-page h2 {
+        font-size: 32px;
+    }
+
+
+    .welcome h2 {
+        font-size: 30px;
+    }
+
+
+    .resource-card {
+        padding: 18px 20px;
+    }
+
+
+    .resource-card h4 {
+        font-size: 16px;
+    }
+
+
+    .resource-card p {
+        font-size: 13px;
+    }
+
+
+    .back-button {
+        font-size: 12px;
+
+        padding: 9px 14px;
+    }
+
+
+    .project-detail-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+
+    .project-detail-row strong {
+        text-align: left;
+    }
+
+
+    .employee-profile-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}

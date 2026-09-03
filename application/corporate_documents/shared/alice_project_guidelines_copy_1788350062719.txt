@@ -1,0 +1,7 @@
+PROJECT GUIDELINES
+
+This document contains internal project procedures,
+project workflows, development practices,
+and operational instructions.
+
+This document is classified as INTERNAL.

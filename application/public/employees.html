@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Employee Directory
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <span class="brand-icon">
+            CS
+        </span>
+
+        <div>
+
+            <h1>
+                Employee Directory
+            </h1>
+
+            <span>
+                Corporate Security Research Environment
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="/logout"
+        class="logout-button"
+    >
+        Logout
+    </a>
+
+</header>
+
+
+
+<main class="dashboard">
+
+
+    <!-- =========================================
+         NAVIGATION
+         ========================================= -->
+
+    <div class="page-navigation">
+
+        <a
+            href="/workspace"
+            class="back-button"
+        >
+            ← Back to Workspace
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================================
+         WELCOME
+         ========================================= -->
+
+    <section class="welcome">
+
+        <div>
+
+            <div class="badge">
+                CORPORATE DIRECTORY
+            </div>
+
+
+            <h2>
+                Employee Directory
+            </h2>
+
+
+            <p>
+                View employee identities and organizational
+                information available within the corporate
+                security environment.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DIRECTORY SUMMARY
+         ========================================= -->
+
+    <section class="status-grid">
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                EMPLOYEES
+            </span>
+
+
+            <strong>
+                3
+            </strong>
+
+
+            <small>
+                Registered corporate identities
+            </small>
+
+        </div>
+
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                CURRENT USER
+            </span>
+
+
+            <strong>
+                {{USERNAME}}
+            </strong>
+
+
+            <small>
+                Authenticated session identity
+            </small>
+
+        </div>
+
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                DIRECTORY STATUS
+            </span>
+
+
+            <strong class="success-text">
+                ACTIVE
+            </strong>
+
+
+            <small>
+                Directory access available
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         EMPLOYEE DIRECTORY
+         ========================================= -->
+
+    <section class="resources">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    CORPORATE EMPLOYEES
+                </span>
+
+
+                <h3>
+                    Employee Records
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-list">
+
+
+            <!-- =====================================
+                 ALICE
+                 ===================================== -->
+
+            <a
+                href="/employees/alice"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        INFORMATION SECURITY
+                    </span>
+
+
+                    <h4>
+                        Alice
+                    </h4>
+
+
+                    <p>
+                        Identity and access management
+                        employee assigned to corporate
+                        security operations.
+                    </p>
+
+
+                    <small>
+                        Username: alice
+                        &nbsp; • &nbsp;
+                        Department: Information Security
+                    </small>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- =====================================
+                 JASON
+                 ===================================== -->
+
+            <a
+                href="/employees/jason"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        CYBERSECURITY RESEARCH
+                    </span>
+
+
+                    <h4>
+                        Jason
+                    </h4>
+
+
+                    <p>
+                        Cybersecurity research employee
+                        assigned to security research and
+                        continuous authentication activities.
+                    </p>
+
+
+                    <small>
+                        Username: jason
+                        &nbsp; • &nbsp;
+                        Department: Cybersecurity Research
+                    </small>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- =====================================
+                 MICHAEL
+                 ===================================== -->
+
+            <a
+                href="/employees/michael"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        SECURITY OPERATIONS
+                    </span>
+
+
+                    <h4>
+                        Michael
+                    </h4>
+
+
+                    <p>
+                        Security operations employee
+                        responsible for infrastructure and
+                        defensive security activities.
+                    </p>
+
+
+                    <small>
+                        Username: michael
+                        &nbsp; • &nbsp;
+                        Department: Security Operations
+                    </small>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         RESEARCH NOTE
+         ========================================= -->
+
+    <section class="research-note">
+
+        <div class="note-icon">
+            i
+        </div>
+
+
+        <div>
+
+            <h4>
+                Behavioral Monitoring
+            </h4>
+
+
+            <p>
+                Employee directory access is recorded as
+                part of the authenticated session telemetry.
+                Viewing employee records may therefore
+                contribute to behavioral analysis during
+                continuous authentication research.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        Continuous Behavioral Risk Evaluation Research Project
+    </p>
+
+</footer>
+
+
+
+</body>
+
+</html>

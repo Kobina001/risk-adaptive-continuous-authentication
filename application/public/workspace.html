@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Corporate Security Workspace
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <span class="brand-icon">
+            CS
+        </span>
+
+        <div>
+
+            <h1>
+                Corporate Security Workspace
+            </h1>
+
+            <span>
+                Continuous Authentication Research Environment
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="/logout"
+        class="logout-button"
+    >
+        Logout
+    </a>
+
+</header>
+
+
+
+<main class="dashboard">
+
+
+    <!-- =========================================
+         NAVIGATION
+         ========================================= -->
+
+    <div class="page-navigation">
+
+        <a
+            href="/dashboard"
+            class="back-button"
+        >
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================================
+         WELCOME
+         ========================================= -->
+
+    <section class="welcome">
+
+        <div>
+
+            <div class="badge">
+                AUTHENTICATED SESSION
+            </div>
+
+
+            <h2>
+                Welcome, {{USERNAME}}
+            </h2>
+
+
+            <p>
+                This environment simulates a corporate workspace
+                where user behavior and contextual signals are
+                continuously evaluated during an authenticated session.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SESSION CONTEXT
+         ========================================= -->
+
+    <section class="status-grid">
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                USER
+            </span>
+
+
+            <strong>
+                {{USERNAME}}
+            </strong>
+
+
+            <small>
+                Authenticated identity
+            </small>
+
+        </div>
+
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                SESSION
+            </span>
+
+
+            <strong class="success-text">
+                Active
+            </strong>
+
+
+            <small>
+                Continuous monitoring enabled
+            </small>
+
+        </div>
+
+
+
+        <div class="status-card">
+
+            <span class="status-label">
+                RISK STATUS
+            </span>
+
+
+            <strong class="neutral-text">
+                Monitoring
+            </strong>
+
+
+            <small>
+                Behavioral telemetry collection active
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         DOCUMENT MANAGEMENT
+         ========================================= -->
+
+    <section class="resources">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    DOCUMENT MANAGEMENT
+                </span>
+
+
+                <h3>
+                    Corporate Documents
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-list">
+
+
+            <!-- PUBLIC -->
+
+            <a
+                href="/document/public"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        PUBLIC
+                    </span>
+
+
+                    <h4>
+                        Employee Handbook
+                    </h4>
+
+
+                    <p>
+                        General company policies and employee information.
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- INTERNAL -->
+
+            <a
+                href="/document/internal"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        INTERNAL
+                    </span>
+
+
+                    <h4>
+                        Project Guidelines
+                    </h4>
+
+
+                    <p>
+                        Internal project procedures and documentation.
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- CONFIDENTIAL -->
+
+            <a
+                href="/document/confidential"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        CONFIDENTIAL
+                    </span>
+
+
+                    <h4>
+                        Quarterly Financial Report
+                    </h4>
+
+
+                    <p>
+                        Confidential financial information.
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- RESTRICTED -->
+
+            <a
+                href="/document/restricted"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        RESTRICTED
+                    </span>
+
+
+                    <h4>
+                        Security Infrastructure Report
+                    </h4>
+
+
+                    <p>
+                        Highly sensitive security infrastructure information.
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CORPORATE OPERATIONS
+         ========================================= -->
+
+    <section class="resources">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    CORPORATE OPERATIONS
+                </span>
+
+
+                <h3>
+                    Workspace Activities
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-list">
+
+
+            <!-- PROJECT WORKSPACE -->
+
+            <a
+                href="/projects"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        PROJECTS
+                    </span>
+
+
+                    <h4>
+                        Project Workspace
+                    </h4>
+
+
+                    <p>
+                        View and manage assigned projects.
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- EMPLOYEE DIRECTORY -->
+
+            <a
+                href="/employees"
+                class="resource-card"
+            >
+
+                <div>
+
+                    <span class="resource-type">
+                        DIRECTORY
+                    </span>
+
+
+                    <h4>
+                        Employee Directory
+                    </h4>
+
+
+                    <p>
+                        View employee profiles, departments,
+                        roles, and corporate responsibilities.
+                    </p>
+
+                    <small>
+                        Directory access is monitored as part
+                        of the continuous authentication research.
+                    </small>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         TELEMETRY STATUS
+         ========================================= -->
+
+    <section class="research-note">
+
+        <div class="note-icon">
+            i
+        </div>
+
+
+        <div>
+
+            <h4>
+                Continuous Behavioral Monitoring
+            </h4>
+
+
+            <p>
+                This session records behavioral and contextual
+                telemetry including user identity, session ID,
+                timestamps, actions, operating system, browser,
+                device type, IP address, access time, authorization
+                outcome, and available location information.
+            </p>
+
+
+            <p>
+                Directory access, employee profile views,
+                project access, document access, and other
+                workspace activities are recorded as part of
+                the research telemetry.
+            </p>
+
+
+            <p>
+                Location collection requires browser permission.
+                If permission is denied, the remaining telemetry
+                continues to be collected.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        Continuous Behavioral Risk Evaluation Research Project
+    </p>
+
+</footer>
+
+
+
+<!-- =============================================
+     CLIENT CONTEXT COLLECTION
+     ============================================= -->
+
+<script>
+
+(function collectClientContext() {
+
+    if (!navigator.geolocation) {
+
+        console.log(
+            "Geolocation is not supported by this browser."
+        );
+
+        return;
+
+    }
+
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(position) {
+
+            const locationData = {
+
+                location: {
+
+                    latitude:
+                        position.coords.latitude,
+
+                    longitude:
+                        position.coords.longitude
+
+                }
+
+            };
+
+
+            fetch(
+                "/telemetry/context",
+                {
+
+                    method:
+                        "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json"
+
+                    },
+
+                    body:
+                        JSON.stringify(
+                            locationData
+                        )
+
+                }
+            )
+
+            .then(
+                response =>
+                    response.json()
+            )
+
+            .then(
+                result => {
+
+                    console.log(
+                        "Client context registered:",
+                        result
+                    );
+
+                }
+            )
+
+            .catch(
+                error => {
+
+                    console.error(
+                        "Unable to register client context:",
+                        error
+                    );
+
+                }
+            );
+
+        },
+
+
+        function(error) {
+
+            console.log(
+                "Location permission was not granted."
+            );
+
+            console.log(
+                "Geolocation error code:",
+                error.code
+            );
+
+        },
+
+
+        {
+
+            enableHighAccuracy:
+                true,
+
+            timeout:
+                10000,
+
+            maximumAge:
+                300000
+
+        }
+
+    );
+
+})();
+
+</script>
+
+
+</body>
+
+</html>

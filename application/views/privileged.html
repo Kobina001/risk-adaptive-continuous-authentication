@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privileged Operation</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <span class="brand-icon">RA</span>
+
+        <div>
+            <h1>Risk-Adaptive Authentication</h1>
+            <span>Privileged Operation</span>
+        </div>
+
+    </div>
+
+    <a href="/logout" class="logout-button">
+        Logout
+    </a>
+
+</header>
+
+
+<main class="dashboard">
+
+    <section class="resource-page">
+
+        <div class="badge">
+            PRIVILEGED OPERATION
+        </div>
+
+        <h2>Privileged Operation</h2>
+
+        <p>
+            This resource represents a high-sensitivity operation
+            within the research environment.
+        </p>
+
+
+        <div class="access-panel">
+
+            <div class="access-row">
+                <span>Authenticated User</span>
+
+                <strong>
+                    {{USERNAME}}
+                </strong>
+            </div>
+
+
+            <div class="access-row">
+                <span>Authentication</span>
+
+                <strong class="success-text">
+                    ✓ Successful
+                </strong>
+            </div>
+
+
+            <div class="access-row">
+                <span>Resource Sensitivity</span>
+
+                <strong>
+                    High
+                </strong>
+            </div>
+
+
+            <div class="access-row">
+                <span>Risk Evaluation</span>
+
+                <strong class="neutral-text">
+                    Not Available
+                </strong>
+            </div>
+
+
+            <div class="access-row">
+                <span>Access Decision</span>
+
+                <strong class="success-text">
+                    ✓ Allowed
+                </strong>
+            </div>
+
+        </div>
+
+
+        <a href="/dashboard" class="secondary-button">
+            ← Back to Dashboard
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Risk-Adaptive Continuous Authentication Research Project
+    </p>
+
+</footer>
+
+</body>
+
+</html>
