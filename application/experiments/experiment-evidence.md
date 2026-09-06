@@ -233,7 +233,7 @@ The detailed risk-state representation exposes information beyond the current ri
 
 
 
-![Detailed risk state](screenshots/06-detailed-risk-state.png)
+![Detailed risk state](screenshots/06-detailed-risk-state.png.png)
 
 
 
