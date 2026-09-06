@@ -30,7 +30,7 @@ Following successful authentication, the application establishes a research sess
 
 
 
-!\[Baseline authentication](screenshots/01-baseline-authentication.png)
+![Baseline authentication](screenshots/01-baseline-authentication.png)
 
 
 
