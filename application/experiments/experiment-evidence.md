@@ -129,7 +129,7 @@ These screenshots demonstrate the transition of an authenticated session into th
 
 
 
-[Hiigh risk step-up evaluation](screenshots/04-high-risk-step-up.png)
+![High risk step-up evaluation](screenshots/04-high-risk-step-up.png)
 
 
 The risk engine evaluates `DOCUMENT\_DOWNLOAD` and `RESTRICTED\_DOCUMENT` signals. The resulting risk score reaches 65, which places the session in the HIGH risk band.
