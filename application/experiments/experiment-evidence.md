@@ -14,7 +14,7 @@ The screenshots complement the complete experimental record documented in `exper
 
 
 
-\---
+
 
 
 
@@ -42,7 +42,7 @@ Following successful authentication, the application establishes a research sess
 
 
 
-\---
+
 
 
 
@@ -72,7 +72,7 @@ The execution begins with an established authenticated session and subsequently 
 
 
 
-\---
+
 
 
 
@@ -113,7 +113,7 @@ Evidence demonstrated:
 
 
 
-\---
+
 
 #### 
 
@@ -125,7 +125,7 @@ These screenshots demonstrate the transition of an authenticated session into th
 
 
 
-\### Risk Engine Evaluation
+**Risk Engine Evaluation**
 
 
 
@@ -150,7 +150,7 @@ The engine returns a `STEP\_UP` decision and indicates that additional authentic
 
 
 
-\### Step-Up Authentication Interface
+**Step-Up Authentication Interface**
 
 
 
@@ -175,7 +175,7 @@ The interface explicitly informs the user that the current session risk level ha
 
 
 
-\---
+
 
 
 
@@ -213,7 +213,7 @@ The specific risk reduction associated with successful step-up authentication is
 
 
 
-\---
+
 
 
 
@@ -233,7 +233,7 @@ The detailed risk-state representation exposes information beyond the current ri
 
 
 
-![Detailed risk state](screenshots/06-detailed-risk-state.png)
+![Detailed risk state result](screenshots/06-detailed-risk-state.png)
 
 
 
@@ -405,7 +405,7 @@ The screenshot shows `QUALIFIES NORMAL` as `YES` and demonstrates the risk state
 
 
 
-\---
+
 
 
 
@@ -421,7 +421,7 @@ The session continues to generate risk-producing activity while `QUALIFIES NORMA
 
 
 
-!\[No decay without normal activity](screenshots/08-no-decay-without-normal-activity.png)
+![No decay without normal activity](screenshots/08-no-decay-without-normal-activity.png)
 
 
 
@@ -443,7 +443,7 @@ Because the activity does not qualify as normal, normal activity decay is not ap
 
 
 
-\---
+
 
 
 
@@ -476,7 +476,7 @@ This demonstrates that a new authenticated session is associated with a new rese
 
 
 
-\---
+
 
 
 
@@ -510,7 +510,7 @@ It also shows a subsequent authentication establishing a new research session an
 
 
 
-\---
+
 
 
 
