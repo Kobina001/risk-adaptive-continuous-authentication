@@ -58,7 +58,7 @@ The execution begins with an established authenticated session and subsequently 
 
 
 
-!\[Risk signal accumulation](screenshots/02-risk-signal-accumulation.png)
+![Risk signal accumulation](screenshots/02-risk-signal-accumulation.png)
 
 
 
@@ -88,7 +88,7 @@ The session contains `DOCUMENT\_SHARE` and `CONFIDENTIAL\_DOCUMENT` signals. The
 
 
 
-!\[Correlation detection](screenshots/03-correlation-detection.png)
+![Correlation detection](screenshots/03-correlation-detection.png)
 
 
 
@@ -129,8 +129,7 @@ These screenshots demonstrate the transition of an authenticated session into th
 
 
 
-!\[HIGH risk step-up risk evaluation](screenshots/04-high-risk-step-up.png)
-
+[Hiigh risk step-up evaluation](screenshots/04-high-risk-step-up.png)
 
 
 The risk engine evaluates `DOCUMENT\_DOWNLOAD` and `RESTRICTED\_DOCUMENT` signals. The resulting risk score reaches 65, which places the session in the HIGH risk band.
@@ -155,7 +154,7 @@ The engine returns a `STEP\_UP` decision and indicates that additional authentic
 
 
 
-!\[Step-up authentication required](screenshots/04-high-risk-step-up-interface.png)
+![Step-up authentication required](screenshots/04-high-risk-step-up-interface.png)
 
 
 
@@ -188,7 +187,7 @@ This screenshot captures the risk evaluation surrounding a successful step-up au
 
 
 
-!\[Successful step-up authentication](screenshots/05-successful-step-up.png)
+![Successful step-up authentication](screenshots/05-successful-step-up.png)
 
 
 
@@ -234,7 +233,7 @@ The detailed risk-state representation exposes information beyond the current ri
 
 
 
-!\[Detailed risk state](screenshots/06-detailed-risk-state.png)
+![Detailed risk state](screenshots/06-detailed-risk-state.png)
 
 
 
@@ -261,7 +260,7 @@ In this execution, the displayed session has a risk score of 40, a MEDIUM risk l
 
 
 
-!\[Detailed risk state signal history part 1](screenshots/06-detailed-risk-state-1.png)
+![Detailed risk state signal history part 1](screenshots/06-detailed-risk-state-1.png)
 
 
 
@@ -297,7 +296,7 @@ The associated metadata also demonstrates that contextual information can be ret
 
 
 
-!\[Detailed risk state signal history part 2](screenshots/06-detailed-risk-state-2.png)
+![Detailed risk state signal history part 2](screenshots/06-detailed-risk-state-2.png)
 
 
 
@@ -327,7 +326,7 @@ The entries demonstrate that document classification, sensitivity, action perfor
 
 
 
-!\[Detailed risk state signal history part 3](screenshots/06-detailed-risk-state-3.png)
+![Detailed risk state signal history part 3](screenshots/06-detailed-risk-state-3.png)
 
 
 
@@ -388,7 +387,7 @@ The risk engine evaluates whether the activity qualifies as normal before applyi
 
 
 
-!\[Risk decay](screenshots/07-risk-decay.png)
+![Risk decay](screenshots/07-risk-decay.png)
 
 
 
@@ -456,7 +455,7 @@ This screenshot demonstrates session isolation across authentication cycles.
 
 
 
-!\[New session ID](screenshots/09-new-session-id.png)
+![New session ID](screenshots/09-new-session-id.png)
 
 
 
@@ -489,7 +488,7 @@ This screenshot demonstrates the relationship between application logout and the
 
 
 
-!\[Logout destroys risk state](screenshots/10-logout-destroys-risk-state.png)
+![Logout destroys risk state](screenshots/10-logout-destroys-risk-state.png)
 
 
 
